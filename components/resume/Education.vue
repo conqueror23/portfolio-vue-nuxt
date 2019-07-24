@@ -1,7 +1,5 @@
 <template>
-    <table id="contact">
-        
-    </table>
+    
 </template>
 
 <script>
