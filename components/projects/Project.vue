@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{skillNum}}</p>
+    <p></p>
   </div>
 </template>
 
