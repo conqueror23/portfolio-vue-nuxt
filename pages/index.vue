@@ -4,7 +4,6 @@
         <Projects />
         <SwApi/>
         project page
-        {{skilN}}
         <Contacts />
     </div>
 </template>
@@ -14,13 +13,13 @@ import NavBar from '../components/NavBar'
 import Contacts from '../components/Contacts'
 import SwApi from '../components/projects/SwApi'
 import Projects from '../components/projects/Project'
+import axios from 'axios'
+
+
 export default {
   name:'projectpage',
   data(){
-    return{
-    skills:10,
-
-    }
+   
   },
     components:{
         Contacts,
@@ -35,8 +34,11 @@ export default {
     ],
   },
   computed:{
-    skilN:function(){
-      return this.skills+1;
+    
+  },methods:{
+    createProject(){
+      axios.post()
+
     }
   }
 
