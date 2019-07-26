@@ -3,14 +3,13 @@
         <NavBar/>
         <p>
         project page
-
         </p>
         <Contacts />
     </div>
 </template>
 
 <script>
-import NavBar from '../components/layout/NavBar'
+import NavBar from '../components/NavBar'
 import Contacts from '../components/Contacts'
 export default {
     components:{

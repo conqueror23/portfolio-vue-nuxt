@@ -5,9 +5,9 @@
     <button @click="getProjectForm">Add Project Form</button>
     <button @click="getWorkForm">Add Work Form</button>
     <hr>
-    <section class='form'>
+    <keep-alive>
       <component :is="formType"></component>
-    </section>
+    </keep-alive>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
   data(){
     return {
       test:'jukun',
-      formType:'projectForm'
+      formType:'projectForm',
     }
   },
   components: {

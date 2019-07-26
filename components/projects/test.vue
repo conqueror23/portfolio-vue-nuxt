@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p v-bind="test">{{test}}</p>
+        <p >{{test}}</p>
     </div>
 </template>
 
