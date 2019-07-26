@@ -1,8 +1,7 @@
 <template>
     <nav>
-        <img src="logo.jpg" alt="pic not found">
+        <img src="/assets/logo.jpg" alt="pic not found">
         <nuxt-link to="/">HOME</nuxt-link>
-        <nuxt-link to="projects">PROJECTS</nuxt-link>
         <nuxt-link to="resume">RESUME</nuxt-link>
     </nav>
 </template>
