@@ -1,25 +1,49 @@
 <template>
-  <div>
-    <p></p>
+  <div class="project-components">
+    <Test />
+    <!-- cannot read other components anymore ?? no cannot be -->
+    <button @click="getProjectForm">Add Project Form</button>
+    <button @click="getWorkForm">Add Work Form</button>
+    <hr>
+    <section class='form'>
+      <component :is="formType"></component>
+    </section>
   </div>
 </template>
 
 <script>
+import ProjectForm from '../projects/ProjectForm'
+import WorkForm from '../projects/WorkForm'
+import Test from '../projects/test'
+
+
 export default {
   name: "Projects",
-  data() {
+  data(){
     return {
-      skills: 12
-    };
+      test:'jukun',
+      formType:'projectForm'
+    }
   },
-  components: {},
-  computed: {
-    skillNum: function() {
-      return this.skills + 1;
+  components: {
+    ProjectForm,
+    Test,
+    'projectForm':ProjectForm,
+    'workForm':WorkForm,
+  },
+  methods:{
+    getProjectForm(){
+      this.formType='projectForm';
+    },
+    getWorkForm(){
+      this.formType='workForm';
     }
   }
+
+
 };
 </script>
 
 <style>
+
 </style>
