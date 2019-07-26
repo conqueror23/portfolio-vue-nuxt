@@ -1,7 +1,10 @@
 <template>
     <div>
         <NavBar/>
+        <p>
         project page
+
+        </p>
         <Contacts />
     </div>
 </template>
