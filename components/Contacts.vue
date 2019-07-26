@@ -31,7 +31,7 @@ export default {
 #contact{
     position: fixed;
     top:30%;
-    left:90%;
+    left:85em;
     display: flex;
     flex-direction: column;
     background: inherit;

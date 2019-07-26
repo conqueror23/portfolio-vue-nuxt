@@ -1,28 +1,49 @@
 <template>
-    <formHelper >
-        <h2 slot="form-header"> Add new Work Experience
-        </h2>
-        <div slot='form-field'>
-            <input type="text" placeholder="companyName">
-            <input type="text" placeholder="jobTitle">
-            <input type="text" placeholder="workType">
-            <input type="text" placeholder="workTime">
-        </div>
-        <div slot="form-control">
-            <button>Submit</button>
-        </div>
-    </formHelper>
+  <formHelper>
+    <h2 slot="form-header">Add new Work Experience</h2>
+    <div class="form-field" slot="form-field">
+      <input type="text" placeholder="companyName" v-model="work.companyName" />
+      <input type="text" placeholder="Title" v-model="work.Title" />
+      <input type="text" placeholder="Type" v-model="work.Type" />
+      <input type="text" placeholder="Time" v-model="work.Time" />
+    </div>
+    <div slot="form-control">
+      <button @click.prevent="updateWork">Submit</button>
+    </div>
+  </formHelper>
 </template>
 
 <script>
-import formHelper from '../projects/FormHelper'
+import axios from "axios";
+import formHelper from "../projects/FormHelper";
 export default {
-components:{
-    formHelper,
-}
-}
+  data() {
+    return {
+      work: {
+        companyName: "",
+        Title: "",
+        Type: "",
+        Time: ""
+      }
+    };
+  },
+  components: {
+    formHelper
+  },
+  methods: {
+    updateWork() {
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          title: this.work.companyName,
+          body: this.work.Title + this.work.Time
+        })
+        .then(res => {
+          console.log(res);
+        });
+    }
+  }
+};
 </script>
 
 <style>
-
 </style>

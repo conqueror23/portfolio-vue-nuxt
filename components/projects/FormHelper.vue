@@ -1,12 +1,13 @@
 <template>
   <form class="form">
-    <div id="form-header">
+    <div class="form-header">
       <slot name="form-header"></slot>
     </div>
-    <div id="form-field">
+    <div  class="form-field">
       <slot name="form-field"></slot>
     </div>
-    <div id="form-control">
+    <br>
+    <div class="form-control">
       <slot name="form-control"></slot>
     </div>
   </form>
@@ -29,5 +30,9 @@ export default {
 .form {
   display: flex;
   flex-wrap: wrap;
+}
+.form-field{
+  display: flex;
+  flex-direction: column;
 }
 </style>
