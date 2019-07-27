@@ -31,10 +31,9 @@ export default {
 #contact{
     position: fixed;
     top:30%;
-    left:85em;
+    left:80%;
     display: flex;
     flex-direction: column;
-    background: inherit;
     border: 0.1em solid blue;
     border-radius: 15%;
     z-index: 3;

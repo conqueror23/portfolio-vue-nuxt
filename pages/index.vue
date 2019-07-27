@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <Projects />
-    <SwApi />project page
+    <SwApi/>
     <Contacts />
   </div>
 </template>
