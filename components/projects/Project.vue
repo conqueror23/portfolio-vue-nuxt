@@ -5,6 +5,9 @@
     <hr />
     <WorkCard />
     <hr />
+    <center>
+      <h1>Add New Record</h1>
+    </center>
     <!-- cannot read other components anymore ?? no cannot be -->
     <div class="forms">
       <div id="form-helpers">
@@ -81,7 +84,7 @@ export default {
   flex-direction: column;
 }
 #add-btn {
-  margin-left: 20em;
+  margin-left: 5em;
   margin-top: 4em;
   float: right;
   display: flex;

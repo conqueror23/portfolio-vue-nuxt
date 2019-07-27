@@ -4,6 +4,7 @@
       <center>
         <h3>{{skill.name}}</h3>
       </center>
+      <div class="skill-desc">{{skill.description}}</div>
       <img v-bind:src="skill.url.toString()" alt="Not Found" />
     </div>
   </div>
@@ -34,8 +35,23 @@ export default {
   -webkit-box-shadow: 13px 13px 20px #000000;
   box-shadow: 13px 13px 20px #000000;
 }
+.skill-desc{
+  z-index: 2;
+  float: inline-end;
+  position: absolute;
+  background: #7f8c8d;
+  color:#ecf0f1;
+  width: 15em;
+  height: 15em;
+  display: none;
+  transition: 1s;
+}
 .skill-wrapper img {
   width: 15em;
   height: 15em;
+}
+
+.skill-wrapper:hover .skill-desc{
+display: block;
 }
 </style>

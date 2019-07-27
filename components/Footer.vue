@@ -17,6 +17,16 @@ export default {
 </script>
 
 <style>
-
+footer{
+    width: 100%;
+    align-content: center;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+footer label span{
+    display: block;
+    padding:2em 2em;
+}
 
 </style>

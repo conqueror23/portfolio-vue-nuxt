@@ -4,7 +4,7 @@
       <h1>Skills</h1>
     </center>
 
-    <div v-for="stack in stackArray">
+    <div id="skill-main" v-for="stack in stackArray">
         <h2>
             {{stack}}
         </h2>
@@ -33,4 +33,7 @@ export default {
 </script>
 
 <style>
+#skill-main{
+  padding: 0 2em;
+}
 </style>

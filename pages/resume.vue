@@ -1,25 +1,25 @@
 <template>
-  <div class="Resume">
+  <div>
     <NavBar />
+    <hr>
     <Education />
     <Skills />
-    <Contacts />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Contacts from "../components/Contacts";
 import NavBar from "../components/NavBar";
-
+import Footer from '../components/Footer'
 import Education from "../components/resume/Education";
 import Skills from "../components/resume/Skills";
 export default {
   name: "resume",
   components: {
-    Contacts,
     NavBar,
     Education,
-    Skills
+    Skills,
+    Footer,
   },
   head: {
     title: "resume",
@@ -29,5 +29,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>

@@ -27,7 +27,7 @@ nav a{
     display: block;
     border: 0.1em solid green;
     color: aliceblue;
-    padding: 0.2em 1em;
+    padding: 0.2em 25%;
     margin:0 0.2em;
 }
 nav a:hover{
@@ -35,7 +35,10 @@ nav a:hover{
     border: 0.1em solid green;
     background: #74b9ff;
     color: #dfe6e9;
-    padding: 0.2em 1em;
+    padding: 0.2em 25%;
     margin:0 0.2em;
+}
+.nuxt-link-exact-active{
+    background: #bdc3c7
 }
 </style>

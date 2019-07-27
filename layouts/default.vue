@@ -53,9 +53,12 @@ html {
 }
 footer{
   display: inline-flex;
-
+  color: #fff;
   position: absolute;
   background: #636e72;
 }
-
+footer a{
+  color:#fff;
+  text-decoration: none;
+}
 </style>

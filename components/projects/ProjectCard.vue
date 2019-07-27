@@ -15,7 +15,7 @@
           <hr />
           <table v-for="(value, att) in item" :key="att">
             <tr>
-              <th>{{att}} :</th>
+              <th>{{att}}|</th>
               <td>{{value}}</td>
             </tr>
           </table>
@@ -69,8 +69,8 @@ export default {
   -moz-box-shadow: 10px 10px 5px #000000;
   -webkit-box-shadow: 10px 10px 5px #000000;
   box-shadow: 10px 10px 5px #000000;
-  width: 40%;
   margin: 0.4em 0.4em;
+  width: 100%;
 }
 .single-card:hover {
   font-size: 120%;
