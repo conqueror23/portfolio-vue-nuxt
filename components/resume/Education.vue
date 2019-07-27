@@ -1,11 +1,11 @@
 <template>
 <div>
+  <ReplaceNav/>
   <div class="edu">
     <center>
     <h1>Educations</h1>
     </center>
     <div class="edu-wrapper">
-      
       <table>
         <thead>
           <tr>
@@ -30,13 +30,16 @@
 
 <script>
 import education from "@/assets/constants/education";
+import ReplaceNav from '../projects/test'
 export default {
   data() {
     return {
       education
     };
   },
-  components: {}
+  components:{
+    ReplaceNav,
+  }
 };
 </script>
 
