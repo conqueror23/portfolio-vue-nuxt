@@ -1,18 +1,21 @@
 <template>
   <div class="edu">
     <h2>Educations</h2>
-    <div class="edu-wrapper" >
+    <div class="edu-wrapper">
       <table>
         <thead>
+          <tr>
+            <th> Educations</th>
           <th>University</th>
           <th>Major</th>
           <th>Degree</th>
           <th>Time</th>
+          </tr>
         </thead>
         <tr v-bind:key="edu.id" v-for="edu  in education">
-          <tbody v-bind:key="term.id" v-for="(term,key) in edu">
-            <td v-if="key != 'id'">{{term}}</td>
-          </tbody>
+          <th v-bind:key="term.id" v-for="(term,key) in edu">
+            <td >{{term}}</td>
+          </th>
         </tr>
       </table>
     </div>

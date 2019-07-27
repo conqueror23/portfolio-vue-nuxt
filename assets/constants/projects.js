@@ -4,7 +4,6 @@ const projects={
         tech:"PHP,Laravel,Mysql",
         detail:"This is a highly integrated system used to show game histories, fund transfers and player activity to agents. In this project, I was responsible to create a game list compare component which involves upload game list, drop off game, generate and maintain instruction documentations. This is a Laravel-based backend project, in my part of work involves request handling, API design and database ETL operations.",
         time:"2019-04 2019-06",
-        imgs:[]
     },
     'PA':{
         name:"Provider API Integration System ",

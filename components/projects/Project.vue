@@ -3,6 +3,8 @@
     <Test />
     <ProjectCard />
     <hr>
+    <WorkCard />
+    <hr>
     <!-- cannot read other components anymore ?? no cannot be -->
     <div class="forms">
       <div id="form-helpers">
@@ -27,6 +29,7 @@ import WorkForm from "../projects/WorkForm";
 import Test from "../projects/test";
 import axios from "axios";
 import ProjectCard from '../projects/ProjectCard'
+import WorkCard from '../projects/WorkCard'
 
 export default {
   name: "Projects",
@@ -42,6 +45,7 @@ export default {
     projectForm: ProjectForm,
     workForm: WorkForm,
     ProjectCard,
+    WorkCard,
   },
   methods: {
     getProjectForm() {

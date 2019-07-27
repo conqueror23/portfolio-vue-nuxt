@@ -46,7 +46,6 @@ export default {
         fin.push(projects[element]);
       });
       return fin;
-
     }
   }
 };
