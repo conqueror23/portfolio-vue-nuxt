@@ -30,7 +30,7 @@ export default {
 #contact {
   position: fixed;
   top: 30%;
-  left: 80%;
+  left: 81%;
   display: flex;
   flex-direction: column;
   border: 0.1em solid blue;

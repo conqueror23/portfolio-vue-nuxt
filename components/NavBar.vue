@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <nuxt-link to="/">HOME</nuxt-link>
+        <nuxt-link to="/">HOME</nuxt-link>|
         <nuxt-link to="resume">RESUME</nuxt-link>
     </nav>
 </template>
@@ -26,9 +26,8 @@ nav{
 nav a{
     display: block;
     border: 0.1em solid green;
-    background: #dfe6e9;
-
-    padding: 0.2em 0.2em;
+    color: aliceblue;
+    padding: 0.2em 1em;
     margin:0 0.2em;
 }
 nav a:hover{
@@ -36,7 +35,7 @@ nav a:hover{
     border: 0.1em solid green;
     background: #74b9ff;
     color: #dfe6e9;
-    padding: 0.2em 0.2em;
+    padding: 0.2em 1em;
     margin:0 0.2em;
 }
 </style>

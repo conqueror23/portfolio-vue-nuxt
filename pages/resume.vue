@@ -1,9 +1,8 @@
 <template>
-  <div className='Resume'>
+  <div class="Resume">
     <NavBar />
-    <div id="resume">resume page</div>
     <Education />
-    <div id="skills"></div>
+    <Skills />
     <Contacts />
   </div>
 </template>
@@ -11,13 +10,16 @@
 <script>
 import Contacts from "../components/Contacts";
 import NavBar from "../components/NavBar";
-import Education from '../components/resume/Education'
+
+import Education from "../components/resume/Education";
+import Skills from "../components/resume/Skills";
 export default {
   name: "resume",
   components: {
     Contacts,
     NavBar,
-    Education
+    Education,
+    Skills
   },
   head: {
     title: "resume",
@@ -27,9 +29,5 @@ export default {
 </script>
 
 <style>
-.resume{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 </style>

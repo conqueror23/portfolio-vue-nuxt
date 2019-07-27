@@ -10,6 +10,7 @@
 <script>
 import NavBar from "../components/NavBar";
 import Contacts from "../components/Contacts";
+
 import SwApi from "../components/projects/SwApi";
 import Projects from "../components/projects/Project";
 import axios from "axios";

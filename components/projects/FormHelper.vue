@@ -3,10 +3,10 @@
     <div class="form-header">
       <slot name="form-header"></slot>
     </div>
-    <div  class="form-field">
+    <div class="form-field">
       <slot name="form-field"></slot>
     </div>
-    <br>
+    <br />
     <div class="form-control">
       <slot name="form-control"></slot>
     </div>
@@ -31,7 +31,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
-.form-field{
+.form-field {
   display: flex;
   flex-direction: column;
 }

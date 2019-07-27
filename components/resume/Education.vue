@@ -1,11 +1,13 @@
 <template>
   <div class="edu">
-    <h2>Educations</h2>
+    <center>
+    <h1>Educations</h1>
+    </center>
     <div class="edu-wrapper">
       <table>
         <thead>
           <tr>
-            <th> Educations</th>
+          <th> Educations</th>
           <th>University</th>
           <th>Major</th>
           <th>Degree</th>
@@ -14,7 +16,9 @@
         </thead>
         <tr v-bind:key="edu.id" v-for="edu  in education">
           <th v-bind:key="term.id" v-for="(term,key) in edu">
-            <td >{{term}}</td>
+            <td v-if="key=='id'">{{term+1}}</td>
+            <td v-else>{{term}}</td>
+             
           </th>
         </tr>
       </table>
@@ -35,10 +39,9 @@ export default {
 </script>
 
 <style>
-.edu {
-  padding: 2em;
-}
+
 .edu-wrapper {
+  padding:1em;
   display: flex;
   flex: 80%;
   flex-direction: row;

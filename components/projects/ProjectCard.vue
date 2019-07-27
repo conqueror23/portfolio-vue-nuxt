@@ -1,72 +1,76 @@
 <template>
-  <div>
+  <div class="projectCard-wrapper">
     <center>
-
-    <h1>Project List</h1>
+      <h1>Project List</h1>
     </center>
 
-    <div id="searchbox">
-      <label>Search Project Keyword</label>
-      <input type="text" placeholder="Search" v-model="searchProject" />
-    </div>
-    <div id="project-card">
-      <div class="single-card" v-for="(item, index) in serachResult" :key="index">
-        <h2>{{index}}</h2>
-        <hr />
-        <table v-for="(value, att) in item" :key="att">
-          <tr>
-            <th>{{att}} :</th>
-            <td>{{value}}</td>
-          </tr>
-        </table>
+    <div id="project-main">
+      <div id="searchbox">
+        <label>Search Project Keyword</label>
+        <input type="text" placeholder="Search" v-model="searchProject" />
+      </div>
+      <div id="project-card">
+        <div class="single-card" v-for="(item, index) in serachResult" :key="index">
+          <h2>{{indexArray[index]}}</h2>
+          <hr />
+          <table v-for="(value, att) in item" :key="att">
+            <tr>
+              <th>{{att}} :</th>
+              <td>{{value}}</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import projects from "../../assets/constants/projects";
-
+import projects from "@/assets/constants/projects";
 export default {
   components: {},
   data() {
     return {
       projectData: projects,
-      searchProject: ""
+      searchProject: "",
+      indexArray: Object.keys(projects)
     };
   },
   computed: {
     serachResult: function() {
       let result = Object.keys(projects).filter(res => {
-        return projects[res].tech.match(this.searchProject);
+        return projects[res].detail.match(this.searchProject);
       });
-      let fin = [];
+      let searchResult = [];
       result.forEach(element => {
-        // element=element.toString();
-        // console.log(projects[element]);
-        fin.push(projects[element]);
+        searchResult.push(projects[element]);
       });
-      return fin;
+      return searchResult;
     }
   }
 };
 </script>
-
 <style>
 #title {
   display: flex;
   justify-content: space-around;
 }
-
 #project-card {
   display: flex;
   flex-wrap: wrap;
 }
-#searchbox{
-  float:inherit;
+#project-main {
+  padding: 0 2em;
+}
+#searchbox {
+  float: inherit;
 }
 .single-card {
+  -moz-box-shadow: 10px 10px 5px #000000;
+  -webkit-box-shadow: 10px 10px 5px #000000;
+  box-shadow: 10px 10px 5px #000000;
   width: 40%;
+  margin: 0.4em 0.4em;
 }
 .single-card:hover {
   font-size: 120%;

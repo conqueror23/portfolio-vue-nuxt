@@ -2,14 +2,20 @@
   <div class="project-components">
     <Test />
     <ProjectCard />
-    <hr>
+    <hr />
     <WorkCard />
-    <hr>
+    <hr />
     <!-- cannot read other components anymore ?? no cannot be -->
     <div class="forms">
       <div id="form-helpers">
         <keep-alive>
-          <component :is="formType"></component>
+          <div v-if="!submitted">
+            <component :is="formType" @submitted="changeDisplay($event)"></component>
+          </div>
+          <div v-else>
+            <h2>You have submited</h2>
+            <p>{{submitData}}</p>
+          </div>
         </keep-alive>
       </div>
       <div id="add-btn">
@@ -18,8 +24,6 @@
         <button class="button--grey" @click="getWorkForm">Add Work Form</button>
       </div>
     </div>
-    
-
   </div>
 </template>
 
@@ -28,15 +32,17 @@ import ProjectForm from "../projects/ProjectForm";
 import WorkForm from "../projects/WorkForm";
 import Test from "../projects/test";
 import axios from "axios";
-import ProjectCard from '../projects/ProjectCard'
-import WorkCard from '../projects/WorkCard'
+import ProjectCard from "../projects/ProjectCard";
+import WorkCard from "../projects/WorkCard";
 
 export default {
   name: "Projects",
   data() {
     return {
       test: "jukun",
-      formType: "projectForm"
+      formType: "projectForm",
+      submitted: "",
+      submitData: []
     };
   },
   components: {
@@ -45,14 +51,20 @@ export default {
     projectForm: ProjectForm,
     workForm: WorkForm,
     ProjectCard,
-    WorkCard,
+    WorkCard
   },
   methods: {
     getProjectForm() {
       this.formType = "projectForm";
+      this.submitted = "";
     },
     getWorkForm() {
       this.formType = "workForm";
+      this.submitted = "";
+    },
+    changeDisplay($event) {
+      this.submitted = true;
+      this.submitData = $event.data;
     }
   }
 };
@@ -79,9 +91,8 @@ export default {
   display: flex;
   flex-direction: column;
 }
-h1{
-  background: #81ecec;
-  color: #636e72;
+h1 {
+  background: #3498db;
+  color: #ecf0f1;
 }
- 
 </style>

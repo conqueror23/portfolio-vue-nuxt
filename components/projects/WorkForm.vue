@@ -24,7 +24,9 @@ export default {
         Title: "",
         Type: "",
         Time: ""
-      }
+      },
+      response:"",
+      submitted:'',
     };
   },
   components: {
@@ -38,7 +40,9 @@ export default {
           body: this.work.Title + this.work.Time
         })
         .then(res => {
-          console.log(res);
+          this.$emit('submitted',res);
+          this.submitted='true';
+          this.response=res;
         });
     }
   }

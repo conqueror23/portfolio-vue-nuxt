@@ -1,6 +1,6 @@
 <template>
   <formHelper>
-    <h2 slot="form-header">Add new Projects </h2>
+    <h2 slot="form-header">Add new Projects</h2>
     <div class="form-field" slot="form-field">
       <input type="text" placeholder="projectName" v-model="project.Name" />
       <input type="text" placeholder="projectTech" v-model="project.Tech" />
@@ -39,9 +39,9 @@ export default {
           body: this.project.Description
         })
         .then(res => {
+          this.$emit("submitted", res);
           console.log(res);
         });
-      console.log(this.project.Name);
     }
   }
 };
