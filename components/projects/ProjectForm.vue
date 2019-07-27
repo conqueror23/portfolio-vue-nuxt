@@ -8,7 +8,7 @@
       <input type="text" placeholder="projectTime" v-model="project.Time" />
     </div>
     <div slot="form-control">
-      <button @click.prevent="uploadProject">Submit</button>
+      <button class="button--green" @click.prevent="uploadProject">Submit</button>
     </div>
   </formHelper>
 </template>

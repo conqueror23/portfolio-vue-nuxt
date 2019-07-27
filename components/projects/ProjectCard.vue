@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div id="title">
-      <h1>Project List</h1>
-      <div id="searchbox">
-        <label>Search Keyword</label>
-        <input type="text" placeholder="Search" v-model="searchProject" />
-      </div>
-    </div>
+    <center>
 
+    <h1>Project List</h1>
+    </center>
+
+    <div id="searchbox">
+      <label>Search Project Keyword</label>
+      <input type="text" placeholder="Search" v-model="searchProject" />
+    </div>
     <div id="project-card">
       <div class="single-card" v-for="(item, index) in serachResult" :key="index">
         <h2>{{index}}</h2>
@@ -61,7 +62,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
-
+#searchbox{
+  float:inherit;
+}
 .single-card {
   width: 40%;
 }
@@ -73,5 +76,8 @@ export default {
 }
 #project-card > div {
   border: 0.1em solid blue;
+}
+td {
+  overflow: auto;
 }
 </style>

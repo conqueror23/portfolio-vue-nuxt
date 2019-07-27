@@ -1,6 +1,6 @@
 <template>
   <formHelper>
-    <h2 slot="form-header">Add new Work Experience</h2>
+    <h2 slot="form-header">Add new Work</h2>
     <div class="form-field" slot="form-field">
       <input type="text" placeholder="companyName" v-model="work.companyName" />
       <input type="text" placeholder="Title" v-model="work.Title" />
@@ -8,7 +8,7 @@
       <input type="text" placeholder="Time" v-model="work.Time" />
     </div>
     <div slot="form-control">
-      <button @click.prevent="updateWork">Submit</button>
+      <button class="button--green" @click.prevent="updateWork">Submit</button>
     </div>
   </formHelper>
 </template>

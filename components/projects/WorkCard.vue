@@ -1,15 +1,24 @@
 <template>
   <div>
+    <center>
+
     <h1>
-      <center>Work Exprience</center>
+        Work Exprience
     </h1>
-    <hr />
-    <label>CompanyName</label>
-    <p>ArticulateJs</p>
-    <label for>Title</label>
-    <p>Software Developer</p>
-    <label for>Time</label>
-    <p>03-2019 to 07-2019</p>
+    <table>
+      <thead>
+        <th>CompanyName</th>
+        <th>Title</th>
+        <th>Time</th>
+        </thead>        
+        <tbody>
+          <td>ArticulateJs</td>
+          <td>Software Developer</td>
+          <td>03-2019 to 07-2019</td>
+        </tbody>
+    </table>
+    
+    </center>
   </div>
 </template>
 
@@ -17,5 +26,6 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
+
 </style>

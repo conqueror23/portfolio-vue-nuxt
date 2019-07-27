@@ -1,6 +1,5 @@
 <template>
     <nav>
-        <img src="/assets/logo.jpg" alt="pic not found">
         <nuxt-link to="/">HOME</nuxt-link>
         <nuxt-link to="resume">RESUME</nuxt-link>
     </nav>
@@ -19,14 +18,15 @@ nav{
     display: flex;
     flex: 0;
     position: fixed;
-    background: brown;
+    background: #636e72;
     border: 0.1em solid gray;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding:0.1em;
 }
 nav a{
     display: block;
     border: 0.1em solid green;
-    background: white;
+    background: #dfe6e9;
 
     padding: 0.2em 0.2em;
     margin:0 0.2em;
@@ -34,8 +34,8 @@ nav a{
 nav a:hover{
     display: block;
     border: 0.1em solid green;
-    background: blue;
-
+    background: #74b9ff;
+    color: #dfe6e9;
     padding: 0.2em 0.2em;
     margin:0 0.2em;
 }

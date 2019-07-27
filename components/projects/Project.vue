@@ -13,9 +13,9 @@
         </keep-alive>
       </div>
       <div id="add-btn">
-        <button @click="getProjectForm">Add Project Form</button>
+        <button class="button--grey" @click="getProjectForm">Add Project Form</button>
         <br />
-        <button @click="getWorkForm">Add Work Form</button>
+        <button class="button--grey" @click="getWorkForm">Add Work Form</button>
       </div>
     </div>
     
@@ -79,4 +79,9 @@ export default {
   display: flex;
   flex-direction: column;
 }
+h1{
+  background: #81ecec;
+  color: #636e72;
+}
+ 
 </style>
