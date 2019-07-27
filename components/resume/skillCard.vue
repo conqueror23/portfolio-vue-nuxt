@@ -42,16 +42,20 @@ export default {
   background: #7f8c8d;
   color:#ecf0f1;
   width: 15em;
-  height: 15em;
+  height: 0em;
   display: none;
   transition: 1s;
 }
+
 .skill-wrapper img {
   width: 15em;
   height: 15em;
 }
 
 .skill-wrapper:hover .skill-desc{
-display: block;
+  height: 15em;
+  display: block;
 }
+
+
 </style>
