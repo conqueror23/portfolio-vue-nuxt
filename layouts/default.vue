@@ -51,4 +51,11 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+footer{
+  display: inline-flex;
+
+  position: absolute;
+  background: #636e72;
+}
+
 </style>

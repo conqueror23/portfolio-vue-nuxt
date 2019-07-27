@@ -2,55 +2,55 @@ const skills = {
   FrontEnd: [
     {
       name: "HTML",
-      url: "@/assets/imgs/html.png"
+      url: "/imgs/html.png"
     },
     {
       name: "CSS",
-      url: "@/assets/imgs/css.png"
+      url: "/imgs/css.png"
     },
     {
       name: "JS",
-      url: "@/assets/imgs/js.png"
+      url: "/imgs/js.png"
     },
     {
       name: "Vue",
-      url: "@/assets/imgs/vue.png"
+      url: "/imgs/vue.png"
     },
     {
       name: "ReactJS",
-      url: "@/assets/imgs/react.png"
+      url: "/imgs/react.png"
     }
   ],
   BackEnd: [
     {
       name: "PHP",
-      url: "@/assets/imgs/php.png"
+      url: "/imgs/php.png"
     },
     {
       name: "Nodejs",
-      url: "@/assets/imgs/nodejs.png"
+      url: "/imgs/nodejs.png"
     },
     {
       name: "Laravel",
-      url: "@/assets/imgs/laravel.png"
+      url: "/imgs/laravel.png"
     },
     {
       name: "Python",
-      url: "@/assets/imgs/python.png"
+      url: "/imgs/python.png"
     }
   ],
   extras: [
     {
       name: "Git",
-      url: "@/assets/imgs/git.png"
+      url: "/imgs/git.png"
     },
     {
       name: "Mysql",
-      url: "@/assets/imgs/mysql.png"
+      url: "/imgs/mysql.png"
     },
     {
       name: "Mongodb",
-      url: "@/assets/imgs/mongodb.png"
+      url: "/imgs/mongodb.png"
     }
   ]
 };
