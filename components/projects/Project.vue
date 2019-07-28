@@ -36,10 +36,9 @@
 import ProjectForm from "../projects/ProjectForm";
 import WorkForm from "../projects/WorkForm";
 import Test from "../projects/test";
-import axios from "axios";
 import ProjectCard from "../projects/ProjectCard";
 import WorkCard from "../projects/WorkCard";
-
+import ProjectPreview from '../projects/ProjectPreview'
 export default {
   name: "Projects",
   data() {
@@ -51,11 +50,10 @@ export default {
     };
   },
   components: {
-    ProjectForm,
-    Test,
-    projectForm: ProjectForm,
-    workForm: WorkForm,
     ProjectCard,
+    projectForm: ProjectForm,
+    Test,
+    workForm: WorkForm,
     WorkCard
   },
   methods: {
@@ -70,7 +68,7 @@ export default {
     changeDisplay($event) {
       this.submitted = true;
       this.submitData = $event.data;
-    }
+    },
   }
 };
 </script>

@@ -6,7 +6,6 @@
     <h1>Educations</h1>
     </center>
     <div class="edu-wrapper">
-      
       <table>
         <thead>
           <tr>
