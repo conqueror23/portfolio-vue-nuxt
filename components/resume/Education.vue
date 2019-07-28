@@ -1,7 +1,7 @@
 <template>
 <div>
-  <ReplaceNav/>
   <div class="edu">
+    <h3>Space to boosts up</h3>
     <center>
     <h1>Educations</h1>
     </center>
@@ -30,20 +30,18 @@
 
 <script>
 import education from "@/assets/constants/education";
-import ReplaceNav from '../projects/test'
 export default {
   data() {
     return {
       education
     };
   },
-  components:{
-    ReplaceNav,
-  }
+  components: {}
 };
 </script>
 
 <style>
+
 
 .edu-wrapper {
   padding:1em;

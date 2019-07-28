@@ -1,10 +1,13 @@
 <template>
   <formHelper>
-    <h2 slot="form-header">Add new Work</h2>
     <div class="form-field" slot="form-field">
+      <label >Company Name</label>
       <input type="text" placeholder="companyName" v-model="work.companyName" />
+      <label >Title</label>
       <input type="text" placeholder="Title" v-model="work.Title" />
+      <label >Type</label>
       <input type="text" placeholder="Type" v-model="work.Type" />
+      <label>Time</label>
       <input type="text" placeholder="Time" v-model="work.Time" />
     </div>
     <div slot="form-control">

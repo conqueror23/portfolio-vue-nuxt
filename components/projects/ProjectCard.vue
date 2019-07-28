@@ -3,18 +3,18 @@
     <center>
       <h1>Project List</h1>
     </center>
-
+    <ProjectPreview v-bind:projects="projectData" @selectProject="selectShow($event)" />
     <div id="project-main">
       <div id="searchbox">
-        <label>Search Project Keyword</label>
+        <label>Datails Search Engine</label>
         <input type="text" placeholder="Search" v-model="searchProject" />
       </div>
       <div id="project-card">
-        <div class="single-card" v-for="(item, index) in serachResult" :key="index">
+        <div :id='indexArray[index]' class="single-card" v-for="(item, index) in serachResult" :key="index">
           <h2>{{indexArray[index]}}</h2>
           <hr />
           <table v-for="(value, att) in item" :key="att">
-            <tr>
+            <tr v-if="att!=='url'">
               <th>{{att}}|</th>
               <td>{{value}}</td>
             </tr>
@@ -27,13 +27,18 @@
 
 <script>
 import projects from "@/assets/constants/projects";
+import ProjectPreview from '@/components/projects/ProjectPreview'
+import { smart } from '@babel/template';
+
 export default {
-  components: {},
+  components: {
+    ProjectPreview,
+  },
   data() {
     return {
       projectData: projects,
       searchProject: "",
-      indexArray: Object.keys(projects)
+      indexArray: Object.keys(projects),
     };
   },
   computed: {
@@ -46,6 +51,23 @@ export default {
         searchResult.push(projects[element]);
       });
       return searchResult;
+    }
+  },
+  methods:{
+    selectShow($event){
+      // this.indexArray=$event;
+      console.log($event);
+      let selectShow = this.projectData[$event];
+      // console.log(this.projectData[$event]) //this is the project you want to show
+      return selectShow; 
+      
+
+
+      // you got the id that of that project now
+      
+      // a better version maybe just give brings back the one you selected object
+      
+      
     }
   }
 };
@@ -63,7 +85,9 @@ export default {
   padding: 0 2em;
 }
 #searchbox {
+  display: flex;
   float: inherit;
+  justify-content: space-evenly;
 }
 .single-card {
   -moz-box-shadow: 10px 10px 5px #000000;
