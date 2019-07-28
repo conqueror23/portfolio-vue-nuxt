@@ -2,10 +2,14 @@
   <formHelper>
     <h2 slot="form-header">Add new Projects</h2>
     <div class="form-field" slot="form-field">
+      <label >ProjectName:</label>
       <input type="text" placeholder="projectName" v-model="project.Name" />
+      <label >Key Techs:</label>
       <input type="text" placeholder="projectTech" v-model="project.Tech" />
-      <input type="text" placeholder="projectDescription" v-model="project.Description" />
+      <label>ProjectTime</label>
       <input type="text" placeholder="projectTime" v-model="project.Time" />
+      <label>Project Description</label>
+      <input type="text" placeholder="projectDescription" v-model="project.Description" />
     </div>
     <div slot="form-control">
       <button class="button--green" @click.prevent="uploadProject">Submit</button>

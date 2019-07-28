@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="resume">
     <NavBar />
     <hr>
     <Education />
@@ -29,6 +29,8 @@ export default {
 </script>
 
 <style>
-
+.resume{
+  border:12px solid red;
+}
 
 </style>

@@ -1,6 +1,7 @@
 <template>
 <div>
   <div class="edu">
+    <h3>Space to boost up</h3>
     <center>
     <h1>Educations</h1>
     </center>
@@ -41,6 +42,7 @@ export default {
 </script>
 
 <style>
+
 
 .edu-wrapper {
   padding:1em;
