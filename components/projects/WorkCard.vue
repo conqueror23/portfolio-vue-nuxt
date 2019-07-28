@@ -1,23 +1,19 @@
 <template>
   <div>
     <center>
-
-    <h1>
-        Work Exprience
-    </h1>
-    <table>
-      <thead>
-        <th>CompanyName</th>
-        <th>Title</th>
-        <th>Time</th>
-        </thead>        
+      <h1>Work Exprience</h1>
+      <table>
+        <thead>
+          <th>CompanyName</th>
+          <th>Title</th>
+          <th>Time</th>
+        </thead>
         <tbody>
           <td>ArticulateJs</td>
           <td>Software Developer</td>
           <td>03-2019 to 07-2019</td>
         </tbody>
-    </table>
-    
+      </table>
     </center>
   </div>
 </template>
@@ -27,5 +23,4 @@ export default {};
 </script>
 
 <style scoped>
-
 </style>

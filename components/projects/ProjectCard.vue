@@ -6,7 +6,7 @@
 
     <div id="project-main">
       <div id="searchbox">
-        <label>Search Project Keyword</label>
+        <label>Datails Search Engine</label>
         <input type="text" placeholder="Search" v-model="searchProject" />
       </div>
       <div id="project-card">
@@ -63,7 +63,9 @@ export default {
   padding: 0 2em;
 }
 #searchbox {
+  display: flex;
   float: inherit;
+  justify-content: space-evenly;
 }
 .single-card {
   -moz-box-shadow: 10px 10px 5px #000000;
