@@ -15,7 +15,7 @@
       <div id="form-helpers">
         <keep-alive>
           <div v-if="!submitted">
-            <component :is="formType" @submitted="changeDisplay($event)"></component>
+            <component :is="formType" @submitted="changeDisplay($event)" v-bind:api='api'></component>
           </div>
           <div v-else>
             <h2>You have submited</h2>
@@ -24,9 +24,8 @@
         </keep-alive>
       </div>
       <div id="add-btn">
-        <button class="button--grey" @click="getProjectForm">Add Project Form</button>
-        <br />
-        <button class="button--grey" @click="getWorkForm">Add Work Form</button>
+        <button v-if="formType == 'workForm'" class="button--grey" @click="getProjectForm">Add Project Form</button>
+        <button v-else class="button--grey" @click="getWorkForm">Add Work Form</button>
       </div>
     </div>
   </div>
@@ -38,7 +37,6 @@ import WorkForm from "../projects/WorkForm";
 import Test from "../projects/test";
 import ProjectCard from "../projects/ProjectCard";
 import WorkCard from "../projects/WorkCard";
-import ProjectPreview from '../projects/ProjectPreview'
 export default {
   name: "Projects",
   data() {
@@ -46,7 +44,8 @@ export default {
       test: "jukun",
       formType: "projectForm",
       submitted: "",
-      submitData: []
+      submitData: [],
+      api:"https://jsonplaceholder.typicode.com/posts",
     };
   },
   components: {

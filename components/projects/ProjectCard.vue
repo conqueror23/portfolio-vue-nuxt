@@ -3,7 +3,6 @@
     <center>
       <h1>Project List</h1>
     </center>
-    <ProjectPreview v-bind:projects="projectData" @selectProject="selectShow($event)" />
     <div id="project-main">
       <div id="searchbox">
         <label>Datails Search Engine</label>
@@ -27,12 +26,10 @@
 
 <script>
 import projects from "@/assets/constants/projects";
-import ProjectPreview from '@/components/projects/ProjectPreview'
-import { smart } from '@babel/template';
 
 export default {
+  name:"projectCard",
   components: {
-    ProjectPreview,
   },
   data() {
     return {
@@ -54,21 +51,6 @@ export default {
     }
   },
   methods:{
-    selectShow($event){
-      // this.indexArray=$event;
-      console.log($event);
-      let selectShow = this.projectData[$event];
-      // console.log(this.projectData[$event]) //this is the project you want to show
-      return selectShow; 
-      
-
-
-      // you got the id that of that project now
-      
-      // a better version maybe just give brings back the one you selected object
-      
-      
-    }
   }
 };
 </script>

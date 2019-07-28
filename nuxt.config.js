@@ -30,7 +30,8 @@ export default {
   */
   plugins: [
     '@/plugins/antd-ui',
-    '@/plugins/vue-scrollto'
+    '@/plugins/vue-scrollto',
+    '@/plugins/axios',
   ],
   /*
   ** Nuxt.js modules
@@ -41,6 +42,7 @@ export default {
   ** Build configuration
   */
   build: {
+    vendor:['axios'],
     /*
     ** You can extend webpack config here
     */

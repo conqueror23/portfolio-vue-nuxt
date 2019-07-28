@@ -1,11 +1,11 @@
 <template>
   <formHelper>
     <div class="form-field" slot="form-field">
-      <label >Company Name</label>
+      <label>Company Name</label>
       <input type="text" placeholder="companyName" v-model="work.companyName" />
-      <label >Title</label>
+      <label>Title</label>
       <input type="text" placeholder="Title" v-model="work.Title" />
-      <label >Type</label>
+      <label>Type</label>
       <input type="text" placeholder="Type" v-model="work.Type" />
       <label>Time</label>
       <input type="text" placeholder="Time" v-model="work.Time" />
@@ -17,9 +17,10 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 import formHelper from "../projects/FormHelper";
 export default {
+  name:"workForm",
   data() {
     return {
       work: {
@@ -28,8 +29,8 @@ export default {
         Type: "",
         Time: ""
       },
-      response:"",
-      submitted:'',
+      response: "",
+      submitted: "",
     };
   },
   components: {
@@ -43,9 +44,9 @@ export default {
           body: this.work.Title + this.work.Time
         })
         .then(res => {
-          this.$emit('submitted',res);
-          this.submitted='true';
-          this.response=res;
+          this.$emit("submitted", res);
+          this.submitted = "true";
+          this.response = res;
         });
     }
   }
