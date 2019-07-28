@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="edu">
-    <h3>Space to boosts up</h3>
+    <h3>Space to boost up</h3>
     <center>
     <h1>Educations</h1>
     </center>
