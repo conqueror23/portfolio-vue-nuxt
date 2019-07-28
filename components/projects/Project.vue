@@ -6,7 +6,9 @@
     <WorkCard />
     <hr />
     <center>
-      <h1>Add New Record</h1>
+      <h1 v-if="formType ==='workForm'">Add New Work Experience</h1>
+      <h1 v-else>Add New Project Experience</h1>
+
     </center>
     <!-- cannot read other components anymore ?? no cannot be -->
     <div class="forms">
