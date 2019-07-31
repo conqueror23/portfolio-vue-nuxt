@@ -18,7 +18,7 @@
 
 <script>
 import axios from "axios";
-import formHelper from "../projects/FormHelper";
+import formHelper from "@/components/projects/FormHelper";
 export default {
   data() {
     return {

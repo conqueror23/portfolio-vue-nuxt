@@ -5,13 +5,9 @@
     </center>
 
     <div id="skill-main" v-for="stack in stackArray">
-        <h2>
-            {{stack}}
-        </h2>
-        <SkillCard v-bind:skills="skills[stack]"/>
-
+      <h2>{{stack}}</h2>
+      <SkillCard v-bind:skills="skills[stack]" />
     </div>
-
   </div>
 </template>
 
@@ -23,7 +19,7 @@ export default {
   data() {
     return {
       skills: skills,
-      stackArray:Object.keys(skills),
+      stackArray: Object.keys(skills)
     };
   },
   components: {
@@ -33,7 +29,7 @@ export default {
 </script>
 
 <style>
-#skill-main{
+#skill-main {
   padding: 0 2em;
 }
 </style>

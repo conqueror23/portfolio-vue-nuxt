@@ -9,7 +9,7 @@
           <th>Time</th>
         </thead>
         <tbody>
-          <td>ArticulateJs</td>
+          <td>Articulate</td>
           <td>Software Developer</td>
           <td>03-2019 to 07-2019</td>
         </tbody>
