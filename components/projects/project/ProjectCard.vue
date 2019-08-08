@@ -9,7 +9,12 @@
         <input type="text" placeholder="Search" v-model="searchProject" />
       </div>
       <div id="project-card">
-        <div :id='indexArray[index]' class="single-card" v-for="(item, index) in serachResult" :key="index">
+        <div
+          :id="indexArray[index]"
+          class="single-card"
+          v-for="(item, index) in serachResult"
+          :key="index"
+        >
           <h2>{{indexArray[index]}}</h2>
           <hr />
           <table v-for="(value, att) in item" :key="att">
@@ -28,20 +33,19 @@
 import projects from "@/assets/constants/projects";
 
 export default {
-  name:"projectCard",
-  components: {
-  },
+  name: "projectCard",
+  components: {},
   data() {
     return {
       projectData: projects,
       searchProject: "",
-      indexArray: Object.keys(projects),
+      indexArray: Object.keys(projects)
     };
   },
   computed: {
     serachResult: function() {
       let result = Object.keys(projects).filter(res => {
-        return projects[res].detail.match(this.searchProject);
+        return projects[res].detail.toLowerCase().match(this.searchProject.toLowerCase());
       });
       let searchResult = [];
       result.forEach(element => {
@@ -50,8 +54,7 @@ export default {
       return searchResult;
     }
   },
-  methods:{
-  }
+  methods: {}
 };
 </script>
 <style>

@@ -35,12 +35,12 @@ export default {
   -webkit-box-shadow: 13px 13px 20px #000000;
   box-shadow: 13px 13px 20px #000000;
 }
-.skill-desc{
+.skill-desc {
   z-index: 2;
   float: inline-end;
   position: absolute;
   background: #7f8c8d;
-  color:#ecf0f1;
+  color: #ecf0f1;
   width: 15em;
   height: 0em;
   display: none;
@@ -52,10 +52,8 @@ export default {
   height: 15em;
 }
 
-.skill-wrapper:hover .skill-desc{
+.skill-wrapper:hover .skill-desc {
   height: 15em;
   display: block;
 }
-
-
 </style>

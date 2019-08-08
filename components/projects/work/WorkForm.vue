@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import axios from 'axios'
-import formHelper from "../projects/FormHelper";
+import axios from "axios";
+import formHelper from "@/components/projects/FormHelper";
 export default {
-  name:"workForm",
+  name: "workForm",
   data() {
     return {
       work: {
@@ -30,7 +30,7 @@ export default {
         Time: ""
       },
       response: "",
-      submitted: "",
+      submitted: ""
     };
   },
   components: {

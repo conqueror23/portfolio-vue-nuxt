@@ -1,9 +1,9 @@
 <template>
   <formHelper>
     <div class="form-field" slot="form-field">
-      <label >ProjectName:</label>
+      <label>ProjectName:</label>
       <input type="text" placeholder="projectName" v-model="project.Name" />
-      <label >Key Techs:</label>
+      <label>Key Techs:</label>
       <input type="text" placeholder="projectTech" v-model="project.Tech" />
       <label>ProjectTime</label>
       <input type="text" placeholder="projectTime" v-model="project.Time" />
@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import formHelper from "../projects/FormHelper";
+import axios from "axios";
+import formHelper from "@/components/projects/FormHelper";
 export default {
   data() {
     return {
@@ -26,18 +26,18 @@ export default {
         Name: "",
         Tech: "",
         Description: "",
-        Time: "",
+        Time: ""
       }
     };
   },
   components: {
-    formHelper,
+    formHelper
   },
   methods: {
     uploadProject() {
       // using vue-resource to send http post request
       axios
-        .post("https://jsonplaceholder.typicode.com/posts",{
+        .post("https://jsonplaceholder.typicode.com/posts", {
           title: this.project.Name,
           body: this.project.Description
         })

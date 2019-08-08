@@ -8,14 +8,13 @@
     <center>
       <h1 v-if="formType ==='workForm'">Add New Work Experience</h1>
       <h1 v-else>Add New Project Experience</h1>
-
     </center>
     <!-- cannot read other components anymore ?? no cannot be -->
     <div class="forms">
       <div id="form-helpers">
         <keep-alive>
           <div v-if="!submitted">
-            <component :is="formType" @submitted="changeDisplay($event)" v-bind:api='api'></component>
+            <component :is="formType" @submitted="changeDisplay($event)" v-bind:api="api"></component>
           </div>
           <div v-else>
             <h2>You have submited</h2>
@@ -24,7 +23,11 @@
         </keep-alive>
       </div>
       <div id="add-btn">
-        <button v-if="formType == 'workForm'" class="button--grey" @click="getProjectForm">Add Project Form</button>
+        <button
+          v-if="formType == 'workForm'"
+          class="button--grey"
+          @click="getProjectForm"
+        >Add Project Form</button>
         <button v-else class="button--grey" @click="getWorkForm">Add Work Form</button>
       </div>
     </div>
@@ -32,11 +35,11 @@
 </template>
 
 <script>
-import ProjectForm from "../projects/ProjectForm";
-import WorkForm from "../projects/WorkForm";
+import ProjectForm from "../projects/project/ProjectForm";
+import WorkForm from "../projects/work/WorkForm";
 import Test from "../projects/test";
-import ProjectCard from "../projects/ProjectCard";
-import WorkCard from "../projects/WorkCard";
+import ProjectCard from "../projects/project/ProjectCard";
+import WorkCard from "../projects/work/WorkCard";
 export default {
   name: "Projects",
   data() {
@@ -45,7 +48,7 @@ export default {
       formType: "projectForm",
       submitted: "",
       submitData: [],
-      api:"https://jsonplaceholder.typicode.com/posts",
+      api: "https://jsonplaceholder.typicode.com/posts"
     };
   },
   components: {
@@ -67,7 +70,7 @@ export default {
     changeDisplay($event) {
       this.submitted = true;
       this.submitData = $event.data;
-    },
+    }
   }
 };
 </script>
