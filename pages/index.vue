@@ -28,6 +28,9 @@ export default {
     createProject() {
       axios.post();
     }
+  },
+  mounted(){
+    this.$myInjectedFunction('index page')
   }
 };
 </script>

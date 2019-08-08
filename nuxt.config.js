@@ -32,6 +32,7 @@ export default {
     '@/plugins/antd-ui',
     '@/plugins/vue-scrollto',
     '@/plugins/axios',
+    '@/plugins/vue-inject'
   ],
   /*
   ** Nuxt.js modules
