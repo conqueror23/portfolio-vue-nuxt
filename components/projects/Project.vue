@@ -27,8 +27,8 @@
           v-if="formType == 'workForm'"
           class="button--grey"
           @click="getProjectForm"
-        >Add Project Form</button>
-        <button v-else class="button--grey" @click="getWorkForm">Add Work Form</button>
+        >Add Project Experience</button>
+        <button v-else class="button--grey" @click="getWorkForm">Add Work Experience</button>
       </div>
     </div>
   </div>
@@ -96,8 +96,5 @@ export default {
   display: flex;
   flex-direction: column;
 }
-h1 {
-  background: #3498db;
-  color: #ecf0f1;
-}
+
 </style>

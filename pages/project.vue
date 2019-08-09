@@ -1,28 +1,34 @@
 <template>
   <div>
-    <NavBar/>
-    <Info/>
-    <Footer/>
+    <NavBar />
+    <Projects />
+    <Footer />
   </div>
 </template>
 
 <script>
 import NavBar from "../components/NavBar";
 import Footer from '../components/Footer'
-import Info from '../components/home/infos'
+import Projects from "../components/projects/Project";
 import axios from "axios";
 
 export default {
-  name: "coverPage",
+  name: "projectpage",
   components: {
     NavBar,
-    Info,
+    Projects,
     Footer
   },
   head: {
-    title: "cover",
+    title: "projects",
     meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }]
   },
+  computed: {},
+  methods: {
+    createProject() {
+      axios.post();
+    }
+  }
 };
 </script>
 

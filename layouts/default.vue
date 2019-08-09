@@ -61,4 +61,9 @@ footer a{
   color:#fff;
   text-decoration: none;
 }
+
+h1 {
+  background: #3498db;
+  color: #ecf0f1;
+}
 </style>
