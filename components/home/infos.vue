@@ -1,33 +1,43 @@
 <template>
   <div id="info-container">
     <Test />
-    <div id="infos">
-      <div id="name">
-        <div>
-          <h1>Bolong Wang</h1>
-          <p>Software Developer</p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div id="name">
+            <div>
+              <h1>Bolong Wang</h1>
+              <p>Software Developer</p>
+              <div id="secret">
+                <center>Secret is Here</center>
+              </div>
+            </div>
+            <h3>(Wayne)</h3>
+          </div>
         </div>
-        <h3>Wayne</h3>
-      </div>
-      <div id="habbit">
-        <h3>Whats More</h3>
-        <ul>
-          <li>
-            <nuxt-link to="/resume#FrontEnd">Front-End</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/resume#BackEnd">Back-End</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/resume#extras">Database</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/project#project-card">Projects</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/project#work-experience">Work Experience</nuxt-link>
-          </li>
-        </ul>
+        <div class="flip-card-back">
+          <div id="habbit">
+            <h2>More about me</h2>
+            <hr>
+            <ul>
+              <li>
+                <nuxt-link to="/resume#FrontEnd">Front-End</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/resume#BackEnd">Back-End</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/resume#extras">Database</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/project#project-card">Projects</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/project#work-experience">Work Experience</nuxt-link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -46,6 +56,7 @@ export default {
 <style>
 #info-container {
   width: 100%;
+  height: 50em;
   display: flex;
   flex-direction: column;
 }
@@ -55,22 +66,19 @@ export default {
   justify-content: center;
   align-content: center;
   display: grid;
-  grid-template-columns: 65% 35%;
 }
 
-#infos h3 {
-  transform: rotate(-90deg);
-}
 #name {
+  margin-top: 10%;
   padding: 1em;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: space-around;
+  align-content: center;
+  justify-content: center;
 }
-#name >div{
+#name > div {
   padding: 0.5em;
-  border:0.1em dotted green;
   height: fit-content;
   z-index: 2;
 }
@@ -82,7 +90,8 @@ export default {
   display: inline-flex;
 }
 #name h1 {
-  color:#30336b;
+  font-family: "Saira Stencil One", cursive;
+  color: #30336b;
   background: inherit;
 }
 
@@ -91,26 +100,36 @@ export default {
   height: 1em;
   color: #a7600fa6;
 }
+#secret {
+  font-weight: 100;
+  color: #30336b;
+  -webkit-animation-name: listExpand; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration:3s; /* Safari 4.0 - 8.0 */
+  animation-name: listExpand;
+  animation-duration:3s;
+  animation-iteration-count:infinite;
+}
 #habbit {
-  margin-top: 10em;
+  margin-top: 10%;
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
 }
-#habbit h3 {
-  margin-top: 2.5em;
+#habbit h2 {
   height: 1em;
+  color: #c7ecee;
 }
 #habbit ul {
-  overflow: hidden;
+  margin-top: 1em;
   font-size: 1.7em;
   padding: 0 0.1em;
   list-style: none;
   font-weight: 200;
   text-decoration: none;
-  -webkit-animation-name: listExpand; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
-  animation-name: listExpand;
-  animation-duration: 3s;
+}
+#habbit hr{
+  margin: auto;
+  width: 70%;
 }
 
 #habbit a {
@@ -121,17 +140,15 @@ export default {
 }
 #habbit a:hover {
   background: #c7ecee;
-  border:0.1em solid #686de0;
+  border: 0.1em solid #686de0;
   border-radius: 15%;
   font-weight: 400;
   color: #e056fd !important;
 }
 #habbit a:visited {
-  color: #ff7979;
+  color: #c7ecee;
 }
-#habbit h3 {
-  color: #686de0;
-}
+
 
 /* animations */
 @-webkit-keyframes listExpand {
@@ -142,7 +159,51 @@ export default {
     font-weight: 600;
   }
   100% {
-    font-weight: 200;
+    font-weight: 100;
   }
+}
+/* flip div */
+.flip-card {
+  border-radius: 20%;
+  background-color: transparent;
+  width: 80%;
+  height: 30em;
+  perspective: 60em;
+  margin: auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-front {
+  display: none;
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #c7ecee;
+  color: black;
+}
+.flip-card-back {
+  background-color: #4d9ed4;
+  color: white;
+  transform: rotateY(180deg);
 }
 </style>

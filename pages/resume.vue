@@ -9,7 +9,7 @@
 
 <script>
 import NavBar from "../components/NavBar";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 import Education from "../components/resume/Education";
 import Skills from "../components/resume/Skills";
 export default {
@@ -18,7 +18,7 @@ export default {
     NavBar,
     Education,
     Skills,
-    Footer,
+    Footer
   },
   head: {
     title: "resume",
@@ -28,8 +28,7 @@ export default {
 </script>
 
 <style>
-.resume{
-  border:12px solid red;
+.resume {
+  
 }
-
 </style>

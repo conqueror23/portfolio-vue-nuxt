@@ -23,12 +23,7 @@ export default {
     title: "projects",
     meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }]
   },
-  computed: {},
-  methods: {
-    createProject() {
-      axios.post();
-    }
-  }
+  
 };
 </script>
 

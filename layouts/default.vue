@@ -23,9 +23,11 @@ html {
   margin: 0;
 }
 body{
+  height: 100%;
   background: #dff9fb;
 
 }
+
 .button--green {
   display: inline-block;
   border-radius: 4px;

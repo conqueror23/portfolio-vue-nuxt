@@ -16,12 +16,12 @@ export default {
 nav {
   width: 100%;
   display: flex;
-  flex: 0;
   position: fixed;
   background: #636e72;
   border: 0.1em solid gray;
   justify-content: space-evenly;
   padding: 0.1em;
+  z-index: 100;
 }
 nav a {
   display: block;
