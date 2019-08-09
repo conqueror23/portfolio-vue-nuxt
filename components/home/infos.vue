@@ -3,22 +3,30 @@
     <Test />
     <div id="infos">
       <div id="name">
-        <span>
+        <div>
           <h1>Bolong Wang</h1>
-        </span>
-        <span id="en-name">
-          <hr />
-          <h3>Wayne</h3>
-        </span>
+          <p>Software Developer</p>
+        </div>
+        <h3>Wayne</h3>
       </div>
       <div id="habbit">
-        <h3>Specialties</h3>
-        <ul >
-          <li>Front-End</li>
-          <li>Back-End</li>
-          <li>Database</li>
-          <li>Communication Skils</li>
-          <li>Problem Solving</li>
+        <h3>Whats More</h3>
+        <ul>
+          <li>
+            <nuxt-link to="/resume#FrontEnd">Front-End</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/resume#BackEnd">Back-End</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/resume#extras">Database</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/project#project-card">Projects</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/project#work-experience">Work Experience</nuxt-link>
+          </li>
         </ul>
       </div>
     </div>
@@ -43,35 +51,98 @@ export default {
 }
 #infos {
   padding: 1em;
-  background: #3498db;
-  height: 50em;
+  height: 50.5em;
   justify-content: center;
   align-content: center;
   display: grid;
-  grid-template-columns: 40em 5em;
+  grid-template-columns: 65% 35%;
+}
+
+#infos h3 {
+  transform: rotate(-90deg);
 }
 #name {
   padding: 1em;
-  display: grid;
-  grid-template-columns: 35% 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
 }
-#name span:nth-child(2) {
-    color: red;
-  transform: rotate(-90deg);
+#name >div{
+  padding: 0.5em;
+  border:0.1em dotted green;
+  height: fit-content;
+  z-index: 2;
 }
-#name span:nth-child(2) hr {
-  width: 4em;
+#name > div p {
+  color: #7275d6;
+  font-weight: 550;
+}
+#name span {
+  display: inline-flex;
+}
+#name h1 {
+  color:#30336b;
+  background: inherit;
 }
 
-#habbit {
-  display: grid;
-  grid-template-columns: 15% 60%;
+#name h3 {
+  margin-top: 2em;
+  height: 1em;
+  color: #a7600fa6;
 }
-#habbit ul{
-    list-style: none;
-    text-decoration: none;
+#habbit {
+  margin-top: 10em;
+  display: flex;
+  flex-wrap: nowrap;
 }
 #habbit h3 {
-  transform: rotate(-90deg);
+  margin-top: 2.5em;
+  height: 1em;
+}
+#habbit ul {
+  overflow: hidden;
+  font-size: 1.7em;
+  padding: 0 0.1em;
+  list-style: none;
+  font-weight: 200;
+  text-decoration: none;
+  -webkit-animation-name: listExpand; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  animation-name: listExpand;
+  animation-duration: 3s;
+}
+
+#habbit a {
+  text-decoration: none;
+  padding: 0.01em;
+  color: #dff9fb;
+  cursor: pointer;
+}
+#habbit a:hover {
+  background: #c7ecee;
+  border:0.1em solid #686de0;
+  border-radius: 15%;
+  font-weight: 400;
+  color: #e056fd !important;
+}
+#habbit a:visited {
+  color: #ff7979;
+}
+#habbit h3 {
+  color: #686de0;
+}
+
+/* animations */
+@-webkit-keyframes listExpand {
+  0% {
+    font-weight: 100;
+  }
+  50% {
+    font-weight: 600;
+  }
+  100% {
+    font-weight: 200;
+  }
 }
 </style>

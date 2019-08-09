@@ -22,7 +22,10 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+body{
+  background: #dff9fb;
 
+}
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -51,16 +54,7 @@ html {
   color: #fff;
   background-color: #35495e;
 }
-footer{
-  display: inline-flex;
-  color: #fff;
-  position: absolute;
-  background: #636e72;
-}
-footer a{
-  color:#fff;
-  text-decoration: none;
-}
+
 
 h1 {
   background: #3498db;

@@ -1,8 +1,8 @@
 <template>
   <nav>
     <nuxt-link to="/">home</nuxt-link>|
-    <nuxt-link to="/project">projects</nuxt-link>|
-    <nuxt-link to="resume">RESUME</nuxt-link>
+    <nuxt-link to="/project">experience</nuxt-link>|
+    <nuxt-link to="resume">resume</nuxt-link>
   </nav>
 </template>
 

@@ -17,10 +17,12 @@ export default {};
 
 <style>
 footer {
+  display: flex;
+  background: #636e72;
   width: 100%;
   align-content: center;
   justify-content: space-evenly;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 footer label span {
