@@ -1,7 +1,6 @@
 <template>
   <div id="resume">
     <NavBar />
-    <hr>
     <Education />
     <Skills />
     <Footer />
