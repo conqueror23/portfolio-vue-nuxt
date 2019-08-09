@@ -18,13 +18,19 @@ export default {};
 <style>
 footer {
   width: 100%;
+  position: relative;
+  top: 96%;
+  clear: both;
+  display: flex;
+  background: #636e72;
   align-content: center;
   justify-content: space-evenly;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
+  flex-wrap: wrap;
 }
 footer label span {
   display: block;
-  padding: 2em 2em;
+  /* padding: 2em 2em; */
 }
 </style>

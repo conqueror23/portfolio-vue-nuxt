@@ -6,8 +6,8 @@
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -15,12 +15,20 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+body {
+  height: 100%;
+  width: 100% !important;
+  background: #dff9fb;
 }
 
 .button--green {
@@ -51,14 +59,9 @@ html {
   color: #fff;
   background-color: #35495e;
 }
-footer{
-  display: inline-flex;
-  color: #fff;
-  position: absolute;
-  background: #636e72;
-}
-footer a{
-  color:#fff;
-  text-decoration: none;
+
+h1 {
+  background: #3498db;
+  color: #ecf0f1;
 }
 </style>

@@ -4,8 +4,8 @@
       <h1>Skills</h1>
     </center>
 
-    <div id="skill-main" v-for="stack in stackArray">
-      <h2>{{stack}}</h2>
+    <div id="skill-main " v-for="stack in stackArray">
+      <h2 :id=stack>{{stack}}</h2>
       <SkillCard v-bind:skills="skills[stack]" />
     </div>
   </div>

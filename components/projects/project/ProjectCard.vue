@@ -82,10 +82,10 @@ export default {
   width: 100%;
 }
 .single-card:hover {
-  font-size: 120%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: 200;
+  background: #badc58;
 }
 #project-card > div {
   border: 0.1em solid blue;

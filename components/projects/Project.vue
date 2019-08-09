@@ -1,6 +1,5 @@
 <template>
   <div class="project-components">
-    <Test />
     <ProjectCard />
     <hr />
     <WorkCard />
@@ -27,8 +26,8 @@
           v-if="formType == 'workForm'"
           class="button--grey"
           @click="getProjectForm"
-        >Add Project Form</button>
-        <button v-else class="button--grey" @click="getWorkForm">Add Work Form</button>
+        >Add Project Experience</button>
+        <button v-else class="button--grey" @click="getWorkForm">Add Work Experience</button>
       </div>
     </div>
   </div>
@@ -78,6 +77,7 @@ export default {
 <style>
 .forms {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
@@ -86,7 +86,7 @@ export default {
   flex-direction: column;
 }
 #add-btn {
-  margin-left: 5em;
+  margin-left: 2em;
   margin-top: 4em;
   float: right;
   display: flex;
@@ -96,8 +96,5 @@ export default {
   display: flex;
   flex-direction: column;
 }
-h1 {
-  background: #3498db;
-  color: #ecf0f1;
-}
+
 </style>
