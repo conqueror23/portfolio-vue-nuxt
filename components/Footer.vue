@@ -25,8 +25,9 @@ footer {
   background: #636e72;
   align-content: center;
   justify-content: space-evenly;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
+  flex-wrap: wrap;
 }
 footer label span {
   display: block;

@@ -1,6 +1,5 @@
 <template>
   <div class="project-components">
-    <Test />
     <ProjectCard />
     <hr />
     <WorkCard />
@@ -78,6 +77,7 @@ export default {
 <style>
 .forms {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
@@ -86,7 +86,7 @@ export default {
   flex-direction: column;
 }
 #add-btn {
-  margin-left: 5em;
+  margin-left: 2em;
   margin-top: 4em;
   float: right;
   display: flex;

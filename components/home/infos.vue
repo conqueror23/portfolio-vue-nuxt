@@ -1,6 +1,5 @@
 <template>
   <div id="info-container">
-    <Test />
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">

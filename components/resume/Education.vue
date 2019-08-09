@@ -1,7 +1,6 @@
 <template>
 <div>
   <div class="edu">
-    <h3>Fill the Gaps between Nav and content</h3>
     <center>
     <h1>Educations</h1>
     </center>
@@ -46,9 +45,13 @@ export default {
 .edu-wrapper {
   padding:1em;
   display: flex;
-  flex: 80%;
   flex-direction: row;
   justify-content: left;
   align-content: center;
+  flex-wrap: wrap;
+}
+.edu-wrapper table{
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>
