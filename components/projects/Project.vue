@@ -1,5 +1,7 @@
 <template>
   <div class="project-components">
+    <Individuals/>
+    <hr>
     <ProjectCard />
     <hr />
     <WorkCard />
@@ -36,9 +38,11 @@
 <script>
 import ProjectForm from "../projects/project/ProjectForm";
 import WorkForm from "../projects/work/WorkForm";
-import Test from "../projects/test";
 import ProjectCard from "../projects/project/ProjectCard";
 import WorkCard from "../projects/work/WorkCard";
+import Individuals from '../projects/project/IndividualProject'
+
+
 export default {
   name: "Projects",
   data() {
@@ -53,8 +57,8 @@ export default {
   components: {
     ProjectCard,
     projectForm: ProjectForm,
-    Test,
     workForm: WorkForm,
+    Individuals,
     WorkCard
   },
   methods: {

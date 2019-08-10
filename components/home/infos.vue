@@ -43,11 +43,9 @@
 </template>
 
 <script>
-import Test from "@/components/projects/test";
 export default {
   name: "infos",
   components: {
-    Test
   }
 };
 </script>
