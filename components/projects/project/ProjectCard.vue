@@ -18,8 +18,8 @@
           <h2>{{indexArray[index]}}</h2>
           <hr />
           <table v-for="(value, att) in item" :key="att">
-            <tr v-if="att!=='url'">
-              <th>{{att}}|</th>
+            <tr class="record-row" v-if="att!=='url'">
+              <th>{{att}}</th>
               <td>{{value}}</td>
             </tr>
           </table>
@@ -45,7 +45,9 @@ export default {
   computed: {
     serachResult: function() {
       let result = Object.keys(projects).filter(res => {
-        return projects[res].detail.toLowerCase().match(this.searchProject.toLowerCase());
+        return projects[res].detail
+          .toLowerCase()
+          .match(this.searchProject.toLowerCase());
       });
       let searchResult = [];
       result.forEach(element => {
@@ -62,24 +64,25 @@ export default {
   display: flex;
   justify-content: space-around;
 }
-#project-card {
-  display: flex;
-  flex-wrap: wrap;
-}
-#project-main {
-  padding: 0 2em;
-}
 #searchbox {
   display: flex;
   float: inherit;
   justify-content: space-evenly;
+}
+
+#project-main {
+  padding: 0 2em;
+}
+#project-card {
+  display: flex;
+  flex-wrap: wrap;
 }
 .single-card {
   -moz-box-shadow: 10px 10px 5px #000000;
   -webkit-box-shadow: 10px 10px 5px #000000;
   box-shadow: 10px 10px 5px #000000;
   margin: 0.4em 0.4em;
-  width: 100%;
+  width: 30%;
 }
 .single-card:hover {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -90,7 +93,15 @@ export default {
 #project-card > div {
   border: 0.1em solid blue;
 }
-td {
-  overflow: auto;
+.record-row{
+  display: grid;
+  grid-template-columns:1fr 3fr;
+}
+
+@media only screen and (max-width:768px){
+ .single-card {
+  width: 100%;
+} 
+  
 }
 </style>
