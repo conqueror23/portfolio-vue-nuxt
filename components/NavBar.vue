@@ -7,14 +7,9 @@
           <nuxt-link to="/">Home</nuxt-link>
           <nuxt-link to="/project">Project</nuxt-link>
           <nuxt-link to="/resume">Resume</nuxt-link>
-    
         </b-navbar-nav>
         <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <nuxt-link to="/">Home</nuxt-link>
-          <nuxt-link to="/project">Project</nuxt-link>
-          <nuxt-link to="/resume">Resume</nuxt-link>
-        </b-navbar-nav>
+       
       </b-collapse>
     </b-navbar>
   </div>
@@ -27,14 +22,13 @@ export default {
 </script>
 
 <style >
-nav a{
+nav a {
   font-size: 2em;
   color: aliceblue;
   margin-left: 2em;
   font-weight: 600;
 }
-.nuxt-link-exact-active{
+.nuxt-link-exact-active {
   text-decoration: underline;
-
 }
 </style>
