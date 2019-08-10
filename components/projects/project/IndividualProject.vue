@@ -61,8 +61,7 @@ export default {
   justify-content: center;
 }
 #individuals img {
-  height: 40%;
-  width: 100%;
+  height: 28em;
 }
 .pri-pro-details {
   background: #eee;
