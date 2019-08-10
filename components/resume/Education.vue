@@ -43,6 +43,7 @@ export default {
 
 
 .edu-wrapper {
+  margin:0 2em;
   padding:1em;
   display: flex;
   flex-direction: row;

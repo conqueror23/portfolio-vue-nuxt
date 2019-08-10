@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div >
     <center>
       <h1>Skills</h1>
     </center>
-
-    <div id="skill-main " v-for="stack in stackArray">
+    <div class="skill-main " v-for="stack in stackArray">
       <h2 :id=stack>{{stack}}</h2>
       <SkillCard v-bind:skills="skills[stack]" />
     </div>
@@ -29,7 +28,9 @@ export default {
 </script>
 
 <style>
-#skill-main {
+
+.skill-main {
+  margin:0 2em;
   padding: 0 2em;
 }
 </style>
