@@ -1,7 +1,7 @@
 <template>
   <div class="projectCard-wrapper">
     <center>
-      <h1>Project List</h1>
+      <h1>Commericial Project List</h1>
     </center>
     <div id="project-main">
       <div id="searchbox">

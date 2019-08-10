@@ -1,5 +1,8 @@
 <template>
   <div id="individuals">
+    <center>
+      <h1>Individual Project</h1>
+    </center>
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -22,7 +25,7 @@
 
       <!-- Slides with custom text -->
       <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Work Sample</h1>
+        <h1>Home Page</h1>
       </b-carousel-slide>
 
       <!-- Slides with image only -->
@@ -85,5 +88,4 @@ export default {
   align-content: center;
   justify-content: center;
 }
-
 </style>
