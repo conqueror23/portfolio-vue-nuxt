@@ -9,10 +9,7 @@
         <thead>
           <tr>
           <th> Educations</th>
-          <th>University</th>
-          <th>Major</th>
-          <th>Degree</th>
-          <th>Time</th>
+         
           </tr>
           </thead>
           <tr v-bind:key="edu.id" v-for="edu  in education">
