@@ -9,7 +9,7 @@
           <nuxt-link to="/resume">Resume</nuxt-link>
         </b-navbar-nav>
         <!-- Right aligned nav items -->
-       
+        
       </b-collapse>
     </b-navbar>
   </div>
