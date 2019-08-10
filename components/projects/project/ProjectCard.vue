@@ -69,7 +69,6 @@ export default {
   float: inherit;
   justify-content: space-evenly;
 }
-
 #project-main {
   padding: 0 2em;
 }
@@ -82,6 +81,7 @@ export default {
   -webkit-box-shadow: 10px 10px 5px #000000;
   box-shadow: 10px 10px 5px #000000;
   margin: 0.4em 0.4em;
+  background: #ecf0f1;
   width: 30%;
 }
 .single-card:hover {
@@ -97,7 +97,6 @@ export default {
   display: grid;
   grid-template-columns:1fr 3fr;
 }
-
 @media only screen and (max-width:768px){
  .single-card {
   width: 100%;

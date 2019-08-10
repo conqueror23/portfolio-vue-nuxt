@@ -31,6 +31,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   flex-wrap: nowrap;
+  background: #ecf0f1;
   -moz-box-shadow: 13px 13px 20px #000000;
   -webkit-box-shadow: 13px 13px 20px #000000;
   box-shadow: 13px 13px 20px #000000;
@@ -44,16 +45,29 @@ export default {
   width: 15em;
   height: 0em;
   display: none;
-  transition: 1s;
-}
 
+  -webkit-animation-name: overlay; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: overlay;
+  animation-duration: 2s;
+}
 .skill-wrapper img {
   width: 15em;
   height: 15em;
 }
-
 .skill-wrapper:hover .skill-desc {
-  height: 15em;
+  transition: 4s;
+  height: 18em;
   display: block;
 }
+@-webkit-keyframes overlay {
+  0% {
+    height: 0em;
+    color: inherit;
+  }
+  100% {
+    height: 18em;
+  }
+}
+
 </style>

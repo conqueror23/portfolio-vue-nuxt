@@ -6,12 +6,12 @@
           <div id="name">
             <div>
               <h1>Bolong Wang</h1>
+              <h3>(Wayne)</h3>
               <p>Software Developer</p>
               <div id="secret">
                 <center>Secret is Here</center>
               </div>
             </div>
-            <h3>(Wayne)</h3>
           </div>
         </div>
         <div class="flip-card-back">
@@ -93,10 +93,7 @@ export default {
   color: #30336b;
   background: inherit;
 }
-
 #name h3 {
-  margin-top: 2em;
-  height: 1em;
   color: #a7600fa6;
 }
 #secret {
@@ -170,7 +167,6 @@ export default {
   perspective: 60em;
   margin: auto;
 }
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -180,11 +176,9 @@ export default {
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 .flip-card:hover .flip-card-front {
   display: none;
 }
@@ -195,7 +189,6 @@ export default {
   height: 100%;
   backface-visibility: hidden;
 }
-
 .flip-card-front {
   background-color: #c7ecee;
   color: black;
