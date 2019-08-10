@@ -18,7 +18,7 @@ const individuals = [
     framwork: "reactjs",
     status:'offline',
     url:"",
-    imgs: ['/imgs/weatherPodcast.png','/imgs/weatherPodcast2.png']
+    imgs: ['/imgs/weatherPodcast1.png']
   },
 ];
 

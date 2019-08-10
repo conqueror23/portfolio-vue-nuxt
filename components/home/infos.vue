@@ -28,12 +28,16 @@
               <li>
                 <nuxt-link to="/resume#extras">Database</nuxt-link>
               </li>
+               <li>
+                <nuxt-link to="/project# individuals">Individual Project</nuxt-link>
+              </li>
               <li>
-                <nuxt-link to="/project#project-card">Projects</nuxt-link>
+                <nuxt-link to="/project#project-card">Commerical Projects</nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/project#work-experience">Work Experience</nuxt-link>
               </li>
+             
             </ul>
           </div>
         </div>

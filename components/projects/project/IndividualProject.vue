@@ -9,28 +9,23 @@
       :interval="4000"
       controls
       indicators
-      background="#ababab"
-      img-width="768"
-      img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
       <div v-for="project in individualProjects" v-if="project.name != 'amazon3d'">
         <div v-for="pic in project.imgs">
-          <b-carousel-slide :img-src="pic" :caption="project.name" img-width="768" img-height="480">
-            <p>{{project.name}}</p>
-            <button>Details</button>
+          <b-carousel-slide :img-src="pic" img-alt="pic not found" img-width="100" img-height="200">
+            <div class="pri-pro-details">
+              <label>Project Status:</label>
+              <span v-if="project.url">Online</span>
+              <span v-else>Offline</span>
+              <a :href="project.url">{{project.url}}</a>
+            </div>
           </b-carousel-slide>
         </div>
       </div>
     </b-carousel>
-
-    <p class="mt-4">
-      Slide #: {{ slide }}
-      <br />
-      Sliding: {{ sliding }}
-    </p>
   </div>
 </template>
 
@@ -64,5 +59,16 @@ export default {
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
+}
+
+#individuals img {
+  height: 40%;
+  width: 100%;
+}
+
+.pri-pro-details {
+  background: #eee;
+  color: #30336b;
+  font-weight: 500;
 }
 </style>
