@@ -165,7 +165,7 @@ export default {
 .flip-card {
   border-radius: 20%;
   background-color: transparent;
-  width: 80%;
+  width: 60%;
   height: 30em;
   perspective: 60em;
   margin: auto;
