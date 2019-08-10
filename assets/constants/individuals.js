@@ -2,17 +2,23 @@ const individuals = [
   {
     name: "arrow signs",
     framwork: "HTML+JS+CSS",
-    imgs: ['/img/arrowSign_cover','/img/arrowSign_client','/img/arrowSign_product','/img/arrowSign_contact','/img/arrowSign_contact_form']
+    status:'online',
+    url:"http://amazon3d.com.au/arrow-sign-initial/covers.html",
+    imgs: ['/imgs/arrowSign_cover.png','/imgs/arrowSign_client.png','/imgs/arrowSign_product.png','/imgs/arrowSign_contact.png','/imgs/arrowSign_contact_form.png']
   },
   {
     name: "amazon3d",
     framwork: "reactjs",
+    status:'offline',
+    url:"",
     imgs: []
   },
   {
     name: "weather podcast",
     framwork: "reactjs",
-    imgs: ['/img/weatherPodcast1','/img/weatherPodcast2']
+    status:'offline',
+    url:"",
+    imgs: ['/imgs/weatherPodcast.png','/imgs/weatherPodcast2.png']
   },
 ];
 
