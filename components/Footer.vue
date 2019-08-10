@@ -28,6 +28,13 @@ footer {
   font-size: 1em;
   font-weight: bold;
   flex-wrap: wrap;
+  color: aliceblue;
+}
+
+footer a{
+  color: aliceblue;
+  text-decoration: none;
+
 }
 footer label span {
   display: block;

@@ -64,4 +64,7 @@ h1 {
   background: #3498db;
   color: #ecf0f1;
 }
+nav footer{
+  color: white;
+}
 </style>

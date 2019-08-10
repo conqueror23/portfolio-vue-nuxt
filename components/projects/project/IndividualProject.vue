@@ -60,12 +60,10 @@ export default {
   align-content: center;
   justify-content: center;
 }
-
 #individuals img {
   height: 40%;
   width: 100%;
 }
-
 .pri-pro-details {
   background: #eee;
   color: #30336b;

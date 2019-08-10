@@ -7,9 +7,7 @@
       <slot name="form-field"></slot>
     </div>
     <br />
-    <div class="form-control">
-      <slot name="form-control"></slot>
-    </div>
+  
   </form>
 </template>
 

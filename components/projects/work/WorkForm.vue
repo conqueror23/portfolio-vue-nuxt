@@ -9,8 +9,7 @@
       <input type="text" placeholder="Type" v-model="work.Type" />
       <label>Time</label>
       <input type="text" placeholder="Time" v-model="work.Time" />
-    </div>
-    <div slot="form-control">
+      <hr />
       <button class="button--green" @click.prevent="updateWork">Submit</button>
     </div>
   </formHelper>

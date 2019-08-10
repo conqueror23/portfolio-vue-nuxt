@@ -17,8 +17,17 @@
         <div class="flip-card-back">
           <div id="habbit">
             <h2>More about me</h2>
-            <hr>
+            <hr />
             <ul>
+              <li>
+                <nuxt-link to="/project# individuals">Individual Project</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/project#project-card">Commerical Projects</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/project#work-experience">Work Experience</nuxt-link>
+              </li>
               <li>
                 <nuxt-link to="/resume#FrontEnd">Front-End</nuxt-link>
               </li>
@@ -28,16 +37,6 @@
               <li>
                 <nuxt-link to="/resume#extras">Database</nuxt-link>
               </li>
-               <li>
-                <nuxt-link to="/project# individuals">Individual Project</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/project#project-card">Commerical Projects</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/project#work-experience">Work Experience</nuxt-link>
-              </li>
-             
             </ul>
           </div>
         </div>
@@ -49,8 +48,7 @@
 <script>
 export default {
   name: "infos",
-  components: {
-  }
+  components: {}
 };
 </script>
 
@@ -105,10 +103,10 @@ export default {
   font-weight: 100;
   color: #30336b;
   -webkit-animation-name: listExpand; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration:3s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
   animation-name: listExpand;
-  animation-duration:3s;
-  animation-iteration-count:infinite;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 #habbit {
   margin-top: 10%;
@@ -128,7 +126,7 @@ export default {
   font-weight: 200;
   text-decoration: none;
 }
-#habbit hr{
+#habbit hr {
   margin: auto;
   width: 70%;
 }
@@ -142,14 +140,14 @@ export default {
 #habbit a:hover {
   background: #c7ecee;
   border: 0.1em solid #686de0;
-  border-radius: 15%;
+  padding: 0.2em;
+  border-radius: 5%;
   font-weight: 400;
   color: #e056fd !important;
 }
 #habbit a:visited {
   color: #c7ecee;
 }
-
 
 /* animations */
 @-webkit-keyframes listExpand {

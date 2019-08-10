@@ -1,43 +1,36 @@
 <template>
-  <nav>
-    <nuxt-link to="/">home</nuxt-link>|
-    <nuxt-link to="/project">experience</nuxt-link>|
-    <nuxt-link to="resume">resume</nuxt-link>
-  </nav>
+  <div>
+    <b-navbar toggleable="lg" type="dark" variant="dark">
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <nuxt-link to="/">Home</nuxt-link>
+          <nuxt-link to="/project">Project</nuxt-link>
+          <nuxt-link to="/resume">Resume</nuxt-link>
+    
+        </b-navbar-nav>
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto"></b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "navbar"
+  name: "NavBar"
 };
 </script>
 
-<style>
-nav {
-  position: relative;
-  display: flex;
-  background: #636e72;
-  border: 0.1em solid gray;
-  justify-content: space-evenly;
-  padding: 0.1em;
-  z-index: 100;
-}
-nav a {
-  display: block;
-  border: 0.1em solid green;
+<style >
+nav a{
+  font-size: 2em;
   color: aliceblue;
-  padding: 0.2em 5%;
-  margin: 0 0.2em;
+  margin-left: 2em;
+  font-weight: 600;
 }
-nav a:hover {
-  display: block;
-  border: 0.1em solid green;
-  background: #74b9ff;
-  color: #dfe6e9;
-  padding: 0.2em 5%;
-  margin: 0 0.2em;
-}
-.nuxt-link-exact-active {
-  background: #bdc3c7;
+.nuxt-link-exact-active{
+  text-decoration: underline;
+
 }
 </style>

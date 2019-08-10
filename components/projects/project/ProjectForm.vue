@@ -9,9 +9,8 @@
       <input type="text" placeholder="projectTime" v-model="project.Time" />
       <label>Project Description</label>
       <input type="text" placeholder="projectDescription" v-model="project.Description" />
-    </div>
-    <div slot="form-control">
-      <button class="button--green" @click.prevent="uploadProject">Submit</button>
+      <hr />
+      <button class="button--green" @click.prevent="updateWork">Submit</button>
     </div>
   </formHelper>
 </template>

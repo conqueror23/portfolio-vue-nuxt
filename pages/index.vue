@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar"
 import Footer from '../components/Footer'
 import Info from '../components/home/infos'
 import axios from "axios";
