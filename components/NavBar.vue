@@ -10,7 +10,11 @@
     
         </b-navbar-nav>
         <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto"></b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+          <nuxt-link to="/">Home</nuxt-link>
+          <nuxt-link to="/project">Project</nuxt-link>
+          <nuxt-link to="/resume">Resume</nuxt-link>
+        </b-navbar-nav>
       </b-collapse>
     </b-navbar>
   </div>
