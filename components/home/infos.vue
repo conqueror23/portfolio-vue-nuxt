@@ -16,9 +16,11 @@
         </div>
         <div class="flip-card-back">
           <div id="habbit">
-            <h2>More about me</h2>
             <hr />
             <ul>
+
+              <h3>Experiences</h3>
+              <hr>
               <li>
                 <nuxt-link to="/project# individuals">Individual Project</nuxt-link>
               </li>
@@ -28,6 +30,9 @@
               <li>
                 <nuxt-link to="/project#work-experience">Work Experience</nuxt-link>
               </li>
+              <hr>
+              <h3>SKills</h3>
+              <hr>
               <li>
                 <nuxt-link to="/resume#FrontEnd">Front-End</nuxt-link>
               </li>
@@ -162,8 +167,8 @@ export default {
 .flip-card {
   border-radius: 20%;
   background-color: transparent;
-  width: 60%;
-  height: 30em;
+  width: 50%;
+  height: 40em;
   perspective: 60em;
   margin: auto;
 }
@@ -198,4 +203,11 @@ export default {
   color: white;
   transform: rotateY(180deg);
 }
+</style>
+
+<style scope>
+.flip-card-back h3{
+  color: antiquewhite;
+}
+  
 </style>
