@@ -10,7 +10,7 @@
       <label>Project Description</label>
       <input type="text" placeholder="projectDescription" v-model="project.Description" />
       <hr />
-      <button class="button--green" @click.prevent="updateWork">Submit</button>
+      <button class="button--green" @click.prevent="uploadProject">Submit</button>
     </div>
   </formHelper>
 </template>
