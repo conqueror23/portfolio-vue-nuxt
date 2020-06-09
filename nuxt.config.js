@@ -1,3 +1,4 @@
+const url = 'https://images-na.ssl-images-amazon.com/images/I/31hCCNVaoeL._AC_SY400_.jpg';
 export default {
   mode: "universal",
   /*
@@ -8,6 +9,7 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: 'og:image', property: 'og:image', content: url },
       {
         hid: "description",
         name: "description",
